@@ -203,7 +203,8 @@ body {
         display: block;
     }
 
-    input:not([type="submit"]) {
+    input:not([type="submit"]),
+    textarea {
         display: block;
         width: 100%;
         height: 50px;
@@ -214,6 +215,10 @@ body {
         line-height: 24px;
         @include font-400-Heebo;
         //heebo
+    }
+
+    textarea {
+        height: 120px;
     }
 
     input[type="submit"] {
@@ -337,7 +342,6 @@ body {
         padding: 80px 30px 70px 30px;
         width: 505px;
 
-        .logo {}
     }
 
     &--setup {
@@ -366,6 +370,13 @@ body {
             margin-top: 5px;
             margin-bottom: 0;
         }
+    }
+
+    &--profile {
+        width: 730px;
+        padding: 40px 95px;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
 }
 
@@ -789,4 +800,120 @@ main {
         margin-top: 20px;
     }
 
+}
+
+.profile__setup {
+    overflow-y: scroll;
+
+    .team__wrapp {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        border-radius: 8px;
+        background: $light-gray;
+        padding: 13px 20px;
+        font-size: 16px;
+        line-height: 24px;
+        @include font-400-Heebo;
+    }
+
+    input.team__input {
+        width: 100%;
+        height: auto;
+        margin-bottom: -13px;
+        padding: 0;
+        margin-top: -13px;
+
+        &:focus,
+        &:active {
+            outline: none
+        }
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    input.cancel__btn {
+        background: white;
+        color: black;
+        margin: 0;
+        @include font-400-Heebo;
+
+        &:hover {
+            background: white;
+            color: lighten(black, 40%);
+        }
+    }
+
+    .team__name {
+        font-size: 14px;
+        line-height: 30px;
+        @include font-400-Heebo;
+        color: #131313;
+        padding: 6px 15px;
+        background: white;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .close__icon {
+            width: 9px;
+            height: auto;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .profile__icon {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 33px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
+
+    .file-input__wrapp {
+        font-size: 11px;
+        line-height: 20px;
+        @include font-400-Heebo;
+        color: #131313;
+        background: #EAEAEA;
+        height: 33px;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        bottom: -3px;
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            background: darken(#EAEAEA, 15%);
+            transition: $transition;
+        }
+
+        input {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background: red;
+            cursor: pointer;
+            margin-top: -20px;
+        }
+    }
 }
