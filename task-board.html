@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projectum</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="grid__layout"> 
+
+	<aside>
+		<div class="logo__section">
+			<img src="img/logo-white.svg" class="aside--logo" alt="">
+		</div>
+		<div class="user user__section flex">
+			<img src="img/userpic.jpg" class="user__icon" alt="">
+			<div>
+				<p class="user__name">Виктория Сметанникова</p>
+				<p class="user__role">Продакт овнер</p>
+			</div>
+		</div>
+		<div class="user__statistics flex">
+			<div class="tasks tasks--closed">
+				<p class="tasks__number">372</p>
+				<p class="tasks__description">задач выполнено</p>
+			</div>
+			<div class="tasks tasks--open">
+				<p class="tasks__number">11</p>
+				<p class="tasks__description">задач открыто</p>
+			</div>
+		</div>
+		<div class="menu section">
+			<h2 class="section__title">МЕНЮ</h2>
+			<ul class="menu__list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Мои задачи</a></li>
+				<li class="notification"><a href="#">Уведомления <span class="notification__count">3</span></a></li>
+			</ul>
+		</div>
+		<div class="projects section">
+			<h2 class="section__title">ПРОЕКТЫ</h2>
+			<ul class="projects__list">
+				<li><a href="#"><img src="img/masks/mask1.jpg" class="projects__icon" alt="">Запуск приложения</a></li>
+				<li><a href="#"><img src="img/masks/mask2.jpg" class="projects__icon" alt="">Редизайн сайта</a></li>
+				<li><a href="#"><img src="img/masks/mask3.jpg" class="projects__icon" alt="">Чёрная пятница</a></li>
+				<li><a href="#"><img src="img/masks/mask4.jpg" class="projects__icon" alt="">Проект №07</a></li>
+			</ul>
+			<a href="#" class="projects--create">+ Добавить проект</a>
+		</div>
+		<div class="team section">
+			<h2 class="section__title">КОМАНДЫ</h2>
+			<div class="team__description flex">
+				<p class="team__side">Дизайнеры</p>
+				<div class="team__members flex">
+					<img src="img/people/Oval-1.jpg" alt="">
+					<img src="img/people/Oval-1.jpg" alt="">
+					<img src="img/people/Oval-1.jpg" alt="">
+					<img src="img/people/Oval-1.jpg" alt="">
+				</div>
+			</div>
+			<div class="team__description flex">
+				<p class="team__side">Бекенд</p>
+				<div class="team__members flex">
+					<img src="img/people/Oval-1.jpg" alt="">
+					<img src="img/people/Oval-1.jpg" alt="">
+				</div>
+			</div>
+			<div class="team__description flex">
+				<p class="team__side">Фронтенд</p>
+				<div class="team__members flex">
+					<img src="img/people/Oval-1.jpg" alt="">
+					<img src="img/people/Oval-1.jpg" alt="">
+					<img src="img/people/Oval-1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</aside>
+	<header>
+		<div class="prj prj__info flex">
+			<div class="prj__title__block flex">
+				<img class="prj__icon" src="img/masks/mask-big@2x.jpg" alt="">
+				<h1>Редизайн сайта</h1>
+				
+			</div>
+			<div class="members__block flex">
+				<img src="img/people/Oval-1.jpg" alt="">
+				<img src="img/people/Oval-1.jpg" alt="">
+				<img src="img/people/Oval-1.jpg" alt="">
+			</div>
+		</div>
+
+		<ul class="tab__navigation">
+			<li class="active"><a href="#">Задачи</a></li>
+			<li><a href="#">Канбан</a></li>
+			<li><a href="#">Календарь</a></li>
+		</ul>
+	</header>
+	<main class="flex kanban__block">
+
+		<div class="column task__column">
+			<div class="item__header">
+				<h2 class="item__title">Беклог</h2>
+				<a href="#" class="item__btn">+ Добавить задачу</a>
+			</div>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label development">DEVELOPEMENT</p>
+				</div>
+				<img src="img/img_prev.jpg" class="task__img" alt="">
+
+			</a>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label marketing">MARKETING</p>
+				</div>
+
+			</a>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label design">DESIGN</p>
+				</div>
+
+			</a>
+		</div>
+
+		<div class="column task__column">
+			<div class="item__header">
+				<h2 class="item__title">Беклог</h2>
+				<a href="#" class="item__btn">+ Добавить задачу</a>
+			</div>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label design">DESIGN</p>
+				</div>
+
+			</a>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label development">DEVELOPEMENT</p>
+				</div>
+				<img src="img/img_prev.jpg" class="task__img" alt="">
+
+			</a>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label development">DEVELOPEMENT</p>
+				</div>
+				<img src="img/img_prev.jpg" class="task__img" alt="">
+
+			</a>
+		</div>
+
+		<div class="column task__column">
+			<div class="item__header">
+				<h2 class="item__title">Беклог</h2>
+				<a href="#" class="item__btn">+ Добавить задачу</a>
+			</div>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label development">DEVELOPEMENT</p>
+				</div>
+				<img src="img/img_prev.jpg" class="task__img" alt="">
+
+			</a>
+
+			<a href="#" class="task task__block">
+				<p class="task__description">E-mail after registration so that I can confirm my</p>
+				<div class="flex">
+					<img src="img/userpic.jpg" class="task__executor" alt="">
+					<p class="task__label marketing">MARKETING</p>
+				</div>
+
+			</a>
+
+		</div>
+	</main>
+</body>
+</html>
