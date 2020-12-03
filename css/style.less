@@ -1,0 +1,229 @@
+@import url(font.less);
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+@transition: 0.3s all ease-in-out;
+@main-beige: #EEEBE5;
+@light-gray: #EAEAEA;
+@main-green: #CEF9C6;
+
+
+a{
+	text-decoration: none;
+	transition: @transition;
+
+	&:hover{
+		text-decoration: none;
+		transition: @transition;
+
+	}
+}
+
+body{
+	.font-400-OS;
+	background: @main-beige;
+	min-height: 100vh;
+}
+
+.flex{
+	display: flex;
+
+	&--center{
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.form{
+	background: white;
+	border-radius: 8px;
+
+	.gap{
+		&--bottom{
+			margin-bottom:25px;
+		}
+	}
+
+	label{
+		// heebo 
+		.font-400-Heebo;
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 7px;
+		display: block;
+	}
+
+	input:not([type="submit"]){
+		display: block;
+		width: 100%;
+		height: 50px;
+		border-radius: 8px;
+		background: @light-gray;
+		padding: 13px 20px;
+		font-size: 16px;
+		line-height: 24px;
+		.font-400-Heebo;
+		//heebo
+	}
+
+	input[type="submit"]{
+		background: @main-green;
+		padding: 15px 47px;
+		border-radius: 25px;
+		font-size: 15px;
+		line-height: 22px;
+		.font-bold-Heebo;
+		//heebo;
+		margin: 40px 0;
+
+		cursor: pointer;
+		transition: @transition;
+
+		&:hover{
+			background: darken(@main-green, 15%);
+			transition: @transition;
+		}
+	}
+
+	&__logo{
+		width: 198px;
+		height: auto;
+		margin-bottom: 70px;
+	}
+	
+
+	.team__select__layout{
+		width: 650px;
+		flex-flow:  wrap;
+		justify-content: space-between;
+
+		
+
+	}
+
+	.radiobtn__immitation{
+		width: calc((100% - 20px) / 2);
+		padding: 25px 20px;
+		background:#F7F6F3;
+		border-radius: 8px; 
+		cursor: pointer;
+		height: 80px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+		line-height: 27px;
+		.font-400-Heebo;
+		margin-bottom: 20px;
+
+		input{
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			opacity: 0;
+
+		}
+		input:checked ~ .checkmark{
+			background: darken(@main-green, 10%);
+			transition: @transition;
+
+			svg *{
+				fill: white;
+			}
+		}
+
+		.checkmark{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: #FFFFFF;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 10px;
+			position: relative;
+			transition: @transition;
+
+			svg{
+				width: 12px;
+				height: auto;
+			}
+		}
+
+
+		
+	}
+}
+.additional__info{
+	p,a{
+		.font-400-Heebo;
+		font-size: 15px;
+		line-height: 22px;
+		display: inline;
+		color: #1D201C
+	}
+
+	a{
+		text-decoration: underline;
+		
+		&:hover{
+			color: lighten(#1D201C, 30%);
+		}
+
+	}
+}
+
+.form{
+	&--registration,&--login{
+		padding: 80px 30px 70px 30px;
+		width: 505px;
+
+		.logo{
+
+		}
+	}
+
+	&--setup{
+		width: 730px;
+		padding: 80px 40px 70px 40px;
+
+		.logo--compressed{
+			width: 70px;
+			height: auto;
+			margin: 0 auto;
+			display: block;
+			margin-bottom: 80px;
+		}
+
+		h1{
+			font-size: 26px;
+			line-height: 38px;
+			.font-bold-Heebo;
+			text-align: center;
+			margin-bottom: 60px;
+		}
+
+		input[type="submit"]{
+			margin-left: auto;
+			display: table;
+			margin-top: 5px;
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+
+
+
+
+
+
