@@ -864,6 +864,23 @@ main {
         display: block;
     }
 
+    .checkbox {
+        width: 30px;
+        height: 30px;
+        background: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        flex-shrink: 0;
+
+        img {
+            width: 13px;
+            height: auto;
+        }
+    }
+
     &__description {
         font-size: 18px;
         line-height: 27px;
@@ -886,6 +903,7 @@ main {
         @include font-bold-Heebo;
         padding: 1px 11px;
         text-transform: uppercase;
+        border-radius: 20px;
 
         &.development {
             background: #FFF1E2;
@@ -1055,4 +1073,287 @@ main {
         }
     }
 
+}
+
+.members {
+    width: 455px;
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+
+    &__list {
+        overflow-y: scroll;
+        height: 100%;
+        margin-right: 30px;
+    }
+
+    &__header {
+        margin-bottom: 20px;
+    }
+
+    &__title,
+    &__count {
+        font-size: 26px;
+        line-height: 38px;
+        @include font-bold-Heebo;
+        color: #131313;
+        display: inline;
+    }
+
+    &__count {
+        margin-left: 10px;
+        color: #707070;
+    }
+
+    &__card {
+        background: #F7F6F3;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        object-fit: cover;
+        margin-right: 15px;
+        flex-shrink: 0
+    }
+
+    &__name {
+        font-size: 18px;
+        line-height: 27px;
+        color: #131313;
+        @include font-bold-Heebo;
+    }
+
+    &__role {
+        font-size: 14px;
+        line-height: 21px;
+        color: #707070;
+        @include font-bold-Heebo;
+    }
+
+    &__tasks {
+        margin-left: auto;
+
+        .tasks__count {
+            font-size: 26px;
+            line-height: 38px;
+            @include font-bold-Heebo;
+            color: #131313;
+            text-align: right
+        }
+
+        .plain__text {
+            font-size: 14px;
+            line-height: 21px;
+            @include font-bold-Heebo;
+            color: black;
+            opacity: 7;
+            margin-top: -10px;
+        }
+    }
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #DCD9D3;
+        border-radius: 5px
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: darken(#DCD9D3, 10%);
+    }
+
+}
+
+.profile {
+    background: white;
+    width: 625px;
+    border-radius: 8px;
+    height: 100%;
+    overflow: scroll;
+
+    &__img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        margin-right: 30px;
+    }
+
+    &__header {
+        align-items: center;
+        padding: 35px 30px 45px 30px;
+        border-bottom: 1px solid #ECECEC
+    }
+
+    &__name {
+        font-size: 26px;
+        line-height: 38px;
+        @include font-bold-Heebo;
+        color: black;
+        margin-bottom: 5px;
+    }
+
+    &__role {
+        font-size: 16px;
+        line-height: 24px;
+        @include font-bold-Heebo;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+    .subtitle {
+        font-size: 20px;
+        line-height: 29px;
+        color: black;
+        @include font-bold-Heebo;
+        margin-bottom: 20px;
+
+        span {
+            opacity: 0.7;
+        }
+    }
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #DCD9D3;
+        border-radius: 5px
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: darken(#DCD9D3, 10%);
+    }
+}
+
+.task__review {
+    padding: 40px 30px 35px 30px;
+    border-bottom: 1px solid #ECECEC;
+
+    &__block {
+        width: 50%;
+
+        .count {
+            font-size: 26px;
+            line-height: 38px;
+            @include font-bold-Heebo;
+            color: black;
+            margin-bottom: 5px;
+            text-align: right
+        }
+
+        .text {
+
+            font-size: 14px;
+            line-height: 21px;
+            @include font-bold-Heebo;
+            color: rgba(0, 0, 0, 0.7);
+            margin-top: -10px;
+
+        }
+
+        .result__chart {
+            width: 155px;
+            height: auto;
+            margin-left: 9px;
+            flex-shrink: 0;
+        }
+    }
+}
+
+
+
+.assigned__task {
+    padding: 30px;
+    border-bottom: 1px solid #ECECEC;
+
+    .task__block {
+        display: flex;
+    }
+
+    .max__container {
+        max-height: 400px;
+        overflow-y: scroll
+    }
+}
+
+.activity__block {
+    padding: 30px;
+
+    .subtitle {
+        margin-bottom: 34px;
+    }
+}
+
+.activity {
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+    &__text {
+        color: black;
+        @include font-400-Heebo;
+        font-size: 16px;
+        line-height: 20px;
+
+        a {
+            @include font-bold-Heebo;
+            color: black;
+
+            &:hover {
+                color: lighten(black, 30%);
+            }
+        }
+    }
+
+    &__time {
+        width: 40px;
+        margin-left: auto;
+
+        span {
+            font-size: 14px;
+            line-height: 20px;
+            @include font-bold-Heebo;
+            color: black;
+            opacity: 0.7;
+            display: block;
+
+            &:last-child {
+                margin-top: -5px;
+            }
+        }
+    }
 }

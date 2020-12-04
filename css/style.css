@@ -652,6 +652,21 @@
 	 border-radius: 8px;
 	 display: block;
 }
+ .task .checkbox {
+	 width: 30px;
+	 height: 30px;
+	 background: white;
+	 border-radius: 8px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 margin-right: 10px;
+	 flex-shrink: 0;
+}
+ .task .checkbox img {
+	 width: 13px;
+	 height: auto;
+}
  .task__description {
 	 font-size: 18px;
 	 line-height: 27px;
@@ -674,6 +689,7 @@
 	 font-weight: 700;
 	 padding: 1px 11px;
 	 text-transform: uppercase;
+	 border-radius: 20px;
 }
  .task__label.development {
 	 background: #fff1e2;
@@ -818,5 +834,246 @@
  .task__setup .form--task input[type="submit"] {
 	 margin-bottom: 0;
 	 margin-top: 60px;
+}
+ .members {
+	 width: 455px;
+	 background: white;
+	 border-radius: 8px;
+	 padding: 30px;
+	/* width */
+	/* Track */
+	/* Handle */
+	/* Handle on hover */
+}
+ .members__list {
+	 overflow-y: scroll;
+	 height: 100%;
+	 margin-right: 30px;
+}
+ .members__header {
+	 margin-bottom: 20px;
+}
+ .members__title, .members__count {
+	 font-size: 26px;
+	 line-height: 38px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: #131313;
+	 display: inline;
+}
+ .members__count {
+	 margin-left: 10px;
+	 color: #707070;
+}
+ .members__card {
+	 background: #f7f6f3;
+	 border-radius: 8px;
+	 padding: 20px;
+	 margin-bottom: 10px;
+}
+ .members__card:last-child {
+	 margin-bottom: 0;
+}
+ .members__icon {
+	 width: 48px;
+	 height: 48px;
+	 border-radius: 50%;
+	 overflow: hidden;
+	 object-fit: cover;
+	 margin-right: 15px;
+	 flex-shrink: 0;
+}
+ .members__name {
+	 font-size: 18px;
+	 line-height: 27px;
+	 color: #131313;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+}
+ .members__role {
+	 font-size: 14px;
+	 line-height: 21px;
+	 color: #707070;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+}
+ .members__tasks {
+	 margin-left: auto;
+}
+ .members__tasks .tasks__count {
+	 font-size: 26px;
+	 line-height: 38px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: #131313;
+	 text-align: right;
+}
+ .members__tasks .plain__text {
+	 font-size: 14px;
+	 line-height: 21px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: black;
+	 opacity: 7;
+	 margin-top: -10px;
+}
+ .members::-webkit-scrollbar {
+	 width: 6px;
+}
+ .members::-webkit-scrollbar-track {
+	 background: white;
+}
+ .members::-webkit-scrollbar-thumb {
+	 background: #dcd9d3;
+	 border-radius: 5px;
+}
+ .members::-webkit-scrollbar-thumb:hover {
+	 background: #c5c0b7;
+}
+ .profile {
+	 background: white;
+	 width: 625px;
+	 border-radius: 8px;
+	 height: 100%;
+	 overflow: scroll;
+	/* width */
+	/* Track */
+	/* Handle */
+	/* Handle on hover */
+}
+ .profile__img {
+	 height: 120px;
+	 width: 120px;
+	 border-radius: 50%;
+	 margin-right: 30px;
+}
+ .profile__header {
+	 align-items: center;
+	 padding: 35px 30px 45px 30px;
+	 border-bottom: 1px solid #ececec;
+}
+ .profile__name {
+	 font-size: 26px;
+	 line-height: 38px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: black;
+	 margin-bottom: 5px;
+}
+ .profile__role {
+	 font-size: 16px;
+	 line-height: 24px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: rgba(0, 0, 0, 0.7);
+}
+ .profile .subtitle {
+	 font-size: 20px;
+	 line-height: 29px;
+	 color: black;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 margin-bottom: 20px;
+}
+ .profile .subtitle span {
+	 opacity: 0.7;
+}
+ .profile::-webkit-scrollbar {
+	 width: 6px;
+}
+ .profile::-webkit-scrollbar-track {
+	 background: white;
+}
+ .profile::-webkit-scrollbar-thumb {
+	 background: #dcd9d3;
+	 border-radius: 5px;
+}
+ .profile::-webkit-scrollbar-thumb:hover {
+	 background: #c5c0b7;
+}
+ .task__review {
+	 padding: 40px 30px 35px 30px;
+	 border-bottom: 1px solid #ececec;
+}
+ .task__review__block {
+	 width: 50%;
+}
+ .task__review__block .count {
+	 font-size: 26px;
+	 line-height: 38px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: black;
+	 margin-bottom: 5px;
+	 text-align: right;
+}
+ .task__review__block .text {
+	 font-size: 14px;
+	 line-height: 21px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: rgba(0, 0, 0, 0.7);
+	 margin-top: -10px;
+}
+ .task__review__block .result__chart {
+	 width: 155px;
+	 height: auto;
+	 margin-left: 9px;
+	 flex-shrink: 0;
+}
+ .assigned__task {
+	 padding: 30px;
+	 border-bottom: 1px solid #ececec;
+}
+ .assigned__task .task__block {
+	 display: flex;
+}
+ .assigned__task .max__container {
+	 max-height: 400px;
+	 overflow-y: scroll;
+}
+ .activity__block {
+	 padding: 30px;
+}
+ .activity__block .subtitle {
+	 margin-bottom: 34px;
+}
+ .activity__icon {
+	 width: 40px;
+	 height: 40px;
+	 border-radius: 50%;
+	 flex-shrink: 0;
+	 margin-right: 20px;
+}
+ .activity__text {
+	 color: black;
+	 font-family: 'Heebo';
+	 font-weight: 400;
+	 font-size: 16px;
+	 line-height: 20px;
+}
+ .activity__text a {
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: black;
+}
+ .activity__text a:hover {
+	 color: #4d4d4d;
+}
+ .activity__time {
+	 width: 40px;
+	 margin-left: auto;
+}
+ .activity__time span {
+	 font-size: 14px;
+	 line-height: 20px;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 color: black;
+	 opacity: 0.7;
+	 display: block;
+}
+ .activity__time span:last-child {
+	 margin-top: -5px;
 }
  
