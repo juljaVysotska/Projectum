@@ -21,7 +21,6 @@ $main-yellow: #FFC200;
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans'), local('OpenSans'),
@@ -31,6 +30,15 @@ $main-yellow: #FFC200;
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+        url('../font/opensans/opensansbold.woff2') format('woff2'),
+        url('../font/opensans/opensansbold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
 
 @mixin font-300-OS {
     font-family: 'Open Sans';
@@ -85,25 +93,19 @@ $main-yellow: #FFC200;
 
 
 @mixin font-300-Heebo {
-    font-family: 'Heebo';
+    font-family: 'Heebo', 'Open Sans', Arial, sans;
     font-weight: 300;
 }
 
 
 @mixin font-400-Heebo {
-    font-family: 'Heebo';
+    font-family: 'Heebo', 'Open Sans', Arial, sans;
     font-weight: 400;
 }
 
 
-@mixin font-500-Heebo {
-    font-family: 'Heebo';
-    font-weight: 500;
-}
-
-
 @mixin font-bold-Heebo {
-    font-family: 'Heebo';
+    font-family: 'Heebo', 'Open Sans', Arial, sans;
     font-weight: 700;
 }
 
@@ -843,7 +845,11 @@ main {
     width: 350px;
     max-height: 100%;
     overflow-y: auto;
-    margin-right: 30px;
+    margin-right: 25px;
+
+    &:last-child{
+        margin-right: 0;
+    }
 
     .item__header {
         margin-bottom: 20px;
