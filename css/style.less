@@ -769,7 +769,14 @@ main {
         background: #F7F6F3;
         border-radius: 8px;
         display: block;
+
+
     }
+
+    &--active {
+        background: #FFF8DD;
+    }
+
 
     .checkbox {
         width: 30px;
@@ -781,10 +788,44 @@ main {
         justify-content: center;
         margin-right: 10px;
         flex-shrink: 0;
+        cursor: pointer;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            left: 0;
+        }
 
         img {
             width: 13px;
             height: auto;
+        }
+
+        &--big {
+            width: 40px;
+            height: 40px;
+            background: #EAEAEA;
+
+            img {
+                width: 16px;
+                height: auto;
+            }
+        }
+    }
+
+    &--finished {
+
+        .checkbox {
+            background: @main-green;
+
+            svg * {
+                fill: black;
+            }
         }
     }
 
@@ -1069,27 +1110,6 @@ main {
         }
     }
 
-    /* width */
-    &::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: white;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #DCD9D3;
-        border-radius: 5px
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: darken(#DCD9D3, 10%);
-    }
-
 }
 
 .profile {
@@ -1139,26 +1159,6 @@ main {
         }
     }
 
-    /* width */
-    &::-webkit-scrollbar {
-        width: 6px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: white;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: #DCD9D3;
-        border-radius: 5px
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: darken(#DCD9D3, 10%);
-    }
 }
 
 .task__review {
@@ -1262,5 +1262,235 @@ main {
                 margin-top: -5px;
             }
         }
+    }
+}
+
+
+.tasks__column,
+.profile,
+.members,
+.task__desctiption {
+
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #DCD9D3;
+        border-radius: 5px
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: darken(#DCD9D3, 10%);
+    }
+}
+
+.tasks__column {
+    width: 445px;
+    background: white;
+    border-radius: 6px;
+    padding: 30px;
+    margin-right: 25px;
+
+    .item__header {
+        margin-bottom: 20px;
+    }
+
+    .task__block {
+        display: flex;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.task__desctiption {
+    background: white;
+    border-radius: 8px;
+    width: 640px;
+
+    .title {
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 40px;
+            height: auto;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__header {
+        padding: 30px;
+        padding-bottom: 0;
+    }
+
+    .author__list {
+        font-size: 16px;
+        line-height: 24px;
+        .font-400-Heebo;
+        color: #131313;
+    }
+
+    .info__block {
+        margin-top: 33px;
+    }
+
+    .dueon__block {
+        margin-right: 40px;
+    }
+
+    .legend {
+        font-size: 16px;
+        line-height: 20px;
+        .font-400-Heebo;
+        color: black;
+        height: 24px;
+        margin-bottom: 6px;
+
+        &--bold {
+            .font-bold-Heebo;
+        }
+    }
+
+    .execuror__block {
+        margin-right: 40px;
+
+        .executor {
+            &__img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                flex-shrink: 0;
+                margin-right: 5px;
+            }
+
+            &__name {
+                font-size: 16px;
+                line-height: 20px;
+                .font-400-Heebo;
+                color: black;
+            }
+        }
+    }
+
+    &__textarea {
+        margin-top: 30px;
+        border-top: 1px solid #ECECEC;
+        max-height: 225px;
+        padding: 45px 0 50px 0
+    }
+
+    &__comments {
+        border-top: 1px solid #ECECEC;
+        padding: 50px 30px;
+
+    }
+}
+
+.comment__input__wrapp {
+    align-items: center;
+    margin-bottom: 20px;
+
+    .comment__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    .comment__input,
+    .comment__submit {
+        height: 40px;
+    }
+
+    input.comment__submit {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 5px 10px;
+        margin-left: 10px;
+        flex-shrink: 0;
+    }
+}
+
+.commet {
+    position: relative;
+    margin-bottom: 20px;
+
+    &__icon {
+        height: calc(48px + 10px);
+        width: calc(48px + 10px);
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 20px;
+        z-index: 9;
+
+        img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+    }
+
+    &__text__wrapp {
+        background: #F7F6F3;
+        padding: 20px 20px 20px 40px;
+        border-radius: 10px;
+        position: relative;
+        width: 95%;
+        margin-left: auto
+    }
+
+    .person__tag {
+        color: @main-yellow;
+        .font-bold-Heebo;
+    }
+
+    &__date {
+        font-size: 12px;
+        line-height: 18px;
+        .font-400-Heebo;
+        color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    &__name {
+        .font-bold-Heebo;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+
+    &__role {
+        .font-400-Heebo;
+    }
+
+    &__text {
+        .font-400-Heebo;
+        font-size: 15px;
+        line-height: 22px;
+
     }
 }

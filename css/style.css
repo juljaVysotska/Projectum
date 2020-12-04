@@ -652,6 +652,9 @@
 	 border-radius: 8px;
 	 display: block;
 }
+ .task--active {
+	 background: #fff8dd;
+}
  .task .checkbox {
 	 width: 30px;
 	 height: 30px;
@@ -662,10 +665,36 @@
 	 justify-content: center;
 	 margin-right: 10px;
 	 flex-shrink: 0;
+	 cursor: pointer;
+	 position: relative;
+}
+ .task .checkbox input {
+	 width: 100%;
+	 height: 100%;
+	 opacity: 0;
+	 position: absolute;
+	 top: 0;
+	 cursor: pointer;
+	 left: 0;
 }
  .task .checkbox img {
 	 width: 13px;
 	 height: auto;
+}
+ .task .checkbox--big {
+	 width: 40px;
+	 height: 40px;
+	 background: #eaeaea;
+}
+ .task .checkbox--big img {
+	 width: 16px;
+	 height: auto;
+}
+ .task--finished .checkbox {
+	 background: #cef9c6;
+}
+ .task--finished .checkbox svg * {
+	 fill: black;
 }
  .task__description {
 	 font-size: 18px;
@@ -840,10 +869,6 @@
 	 background: white;
 	 border-radius: 8px;
 	 padding: 30px;
-	/* width */
-	/* Track */
-	/* Handle */
-	/* Handle on hover */
 }
  .members__list {
 	 overflow-y: scroll;
@@ -917,29 +942,12 @@
 	 opacity: 7;
 	 margin-top: -10px;
 }
- .members::-webkit-scrollbar {
-	 width: 6px;
-}
- .members::-webkit-scrollbar-track {
-	 background: white;
-}
- .members::-webkit-scrollbar-thumb {
-	 background: #dcd9d3;
-	 border-radius: 5px;
-}
- .members::-webkit-scrollbar-thumb:hover {
-	 background: #c5c0b7;
-}
  .profile {
 	 background: white;
 	 width: 625px;
 	 border-radius: 8px;
 	 height: 100%;
 	 overflow: scroll;
-	/* width */
-	/* Track */
-	/* Handle */
-	/* Handle on hover */
 }
  .profile__img {
 	 height: 120px;
@@ -977,19 +985,6 @@
 }
  .profile .subtitle span {
 	 opacity: 0.7;
-}
- .profile::-webkit-scrollbar {
-	 width: 6px;
-}
- .profile::-webkit-scrollbar-track {
-	 background: white;
-}
- .profile::-webkit-scrollbar-thumb {
-	 background: #dcd9d3;
-	 border-radius: 5px;
-}
- .profile::-webkit-scrollbar-thumb:hover {
-	 background: #c5c0b7;
 }
  .task__review {
 	 padding: 40px 30px 35px 30px;
@@ -1075,5 +1070,198 @@
 }
  .activity__time span:last-child {
 	 margin-top: -5px;
+}
+ .tasks__column, .profile, .members, .task__desctiption {
+	 height: 100%;
+	 overflow-y: scroll;
+	 overflow-x: hidden;
+	/* width */
+	/* Track */
+	/* Handle */
+	/* Handle on hover */
+}
+ .tasks__column::-webkit-scrollbar, .profile::-webkit-scrollbar, .members::-webkit-scrollbar, .task__desctiption::-webkit-scrollbar {
+	 width: 6px;
+}
+ .tasks__column::-webkit-scrollbar-track, .profile::-webkit-scrollbar-track, .members::-webkit-scrollbar-track, .task__desctiption::-webkit-scrollbar-track {
+	 background: white;
+}
+ .tasks__column::-webkit-scrollbar-thumb, .profile::-webkit-scrollbar-thumb, .members::-webkit-scrollbar-thumb, .task__desctiption::-webkit-scrollbar-thumb {
+	 background: #dcd9d3;
+	 border-radius: 5px;
+}
+ .tasks__column::-webkit-scrollbar-thumb:hover, .profile::-webkit-scrollbar-thumb:hover, .members::-webkit-scrollbar-thumb:hover, .task__desctiption::-webkit-scrollbar-thumb:hover {
+	 background: #c5c0b7;
+}
+ .tasks__column {
+	 width: 445px;
+	 background: white;
+	 border-radius: 6px;
+	 padding: 30px;
+	 margin-right: 25px;
+}
+ .tasks__column .item__header {
+	 margin-bottom: 20px;
+}
+ .tasks__column .task__block {
+	 display: flex;
+}
+ .tasks__column .task__block:last-child {
+	 margin-bottom: 30px;
+}
+ .task__desctiption {
+	 background: white;
+	 border-radius: 8px;
+	 width: 640px;
+}
+ .task__desctiption .title {
+	 align-items: center;
+	 justify-content: space-between;
+}
+ .task__desctiption .title img {
+	 width: 40px;
+	 height: auto;
+	 flex-shrink: 0;
+	 cursor: pointer;
+}
+ .task__desctiption__header {
+	 padding: 30px;
+	 padding-bottom: 0;
+}
+ .task__desctiption .author__list {
+	 font-size: 16px;
+	 line-height: 24px;
+	 font-family: 'Heebo';
+	 font-weight: 400;
+	 color: #131313;
+}
+ .task__desctiption .info__block {
+	 margin-top: 33px;
+}
+ .task__desctiption .dueon__block {
+	 margin-right: 40px;
+}
+ .task__desctiption .legend {
+	 font-size: 16px;
+	 line-height: 20px;
+	 font-family: 'Heebo';
+	 font-weight: 400;
+	 color: black;
+	 height: 24px;
+	 margin-bottom: 6px;
+}
+ .task__desctiption .legend--bold {
+	 font-family: 'Heebo';
+	 font-weight: 700;
+}
+ .task__desctiption .execuror__block {
+	 margin-right: 40px;
+}
+ .task__desctiption .execuror__block .executor__img {
+	 width: 20px;
+	 height: 20px;
+	 border-radius: 50%;
+	 flex-shrink: 0;
+	 margin-right: 5px;
+}
+ .task__desctiption .execuror__block .executor__name {
+	 font-size: 16px;
+	 line-height: 20px;
+	 font-family: 'Heebo';
+	 font-weight: 400;
+	 color: black;
+}
+ .task__desctiption__textarea {
+	 margin-top: 30px;
+	 border-top: 1px solid #ececec;
+	 max-height: 225px;
+	 padding: 45px 0 50px 0;
+}
+ .task__desctiption__comments {
+	 border-top: 1px solid #ececec;
+	 padding: 50px 30px;
+}
+ .comment__input__wrapp {
+	 align-items: center;
+	 margin-bottom: 20px;
+}
+ .comment__input__wrapp .comment__icon {
+	 width: 48px;
+	 height: 48px;
+	 border-radius: 50%;
+	 margin-right: 10px;
+	 flex-shrink: 0;
+}
+ .comment__input__wrapp .comment__input, .comment__input__wrapp .comment__submit {
+	 height: 40px;
+}
+ .comment__input__wrapp input.comment__submit {
+	 align-items: center;
+	 justify-content: center;
+	 display: flex;
+	 padding: 5px 10px;
+	 margin-left: 10px;
+	 flex-shrink: 0;
+}
+ .commet {
+	 position: relative;
+	 margin-bottom: 20px;
+}
+ .commet__icon {
+	 height: calc(48px + 10px);
+	 width: calc(48px + 10px);
+	 background: white;
+	 border-radius: 50%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 20px;
+	 z-index: 9;
+}
+ .commet__icon img {
+	 width: 48px;
+	 height: 48px;
+	 border-radius: 50%;
+}
+ .commet__text__wrapp {
+	 background: #f7f6f3;
+	 padding: 20px 20px 20px 40px;
+	 border-radius: 10px;
+	 position: relative;
+	 width: 95%;
+	 margin-left: auto;
+}
+ .commet .person__tag {
+	 color: #ffc200;
+	 font-family: 'Heebo';
+	 font-weight: 700;
+}
+ .commet__date {
+	 font-size: 12px;
+	 line-height: 18px;
+	 font-family: 'Heebo';
+	 font-weight: 400;
+	 color: rgba(0, 0, 0, 0.7);
+	 position: absolute;
+	 right: 20px;
+	 top: 20px;
+}
+ .commet__name {
+	 font-family: 'Heebo';
+	 font-weight: 700;
+	 font-size: 16px;
+	 line-height: 24px;
+	 margin-bottom: 5px;
+}
+ .commet__role {
+	 font-family: 'Heebo';
+	 font-weight: 400;
+}
+ .commet__text {
+	 font-family: 'Heebo';
+	 font-weight: 400;
+	 font-size: 15px;
+	 line-height: 22px;
 }
  
