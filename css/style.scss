@@ -1362,7 +1362,8 @@ main {
 .tasks__column,
 .profile,
 .members,
-.task__desctiption {
+.task__desctiption,
+.calendar__bottom {
 
     height: 100%;
     overflow-y: scroll;
@@ -1586,4 +1587,97 @@ main {
         line-height: 22px;
 
     }
+}
+
+.calendar__layout {
+    .tasks__column {
+        margin-right: 0;
+    }
+}
+
+.calendar__column {
+    background: white;
+    border-radius: 8px;
+    width: 635px;
+    margin-right: 30px;
+
+    .item__header {
+        padding: 30px;
+        padding-bottom: 0;
+    }
+}
+
+.calendar__header {
+    padding: 0 33px;
+    border-bottom: 1px solid #ECECEC;
+    margin-top: 15px;
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        list-style-type: none;
+        width: 77px;
+        padding-bottom: 13px;
+        font-size: 14px;
+        line-height: 21px;
+        @include font-bold-Heebo;
+        text-transform: uppercase;
+        margin-right: 6px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.calendar__bottom {
+    display: grid;
+    grid-template-rows: repeat(10, 77px);
+    grid-template-columns: repeat(7, 77px);
+    grid-gap: 5px;
+    padding: 20px 33px;
+    height: calc(100% - 65px - 50px);
+}
+
+.calendar__bottom>div {
+    padding: 10px;
+    background: #F7F6F3;
+    border-radius: 8px;
+    position: relative;
+    height: 77px;
+    width: 77px;
+
+    &.white {
+        background: white !important;
+    }
+
+    &:nth-child(7n),
+    &:nth-child(7n - 1) {
+        background: #F6E9E9;
+    }
+
+    &.yellow {
+        background: #FFF8DD !important;
+    }
+
+    .number {
+        text-align: left;
+        @include font-bold-Heebo;
+        font-size: 18px;
+        line-height: 27px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .tasks {
+        font-size: 12px;
+        line-height: 20px;
+        color: black;
+        @include font-bold-Heebo;
+        position: absolute;
+        bottom: 11px;
+        left: 10px;
+    }
+
 }
